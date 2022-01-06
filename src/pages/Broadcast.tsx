@@ -54,6 +54,8 @@ export default function Broadcast() {
     }
     const VideoPreview: FC<VideoPreviewProps> = (props) => {
         const videoRef = useRef<HTMLVideoElement>(null);
+        const [title, setTitle] = useState<string>("");
+        const [desc, setDesc] = useState<string>("");
 
         useEffect(() => {
             if (props.stream && videoRef.current) {
@@ -65,7 +67,7 @@ export default function Broadcast() {
         }, [])
 
         const createBroadcast = () => {
-
+            console.log({title, desc});
         }
 
         return (
@@ -79,10 +81,10 @@ export default function Broadcast() {
                 <div className="flex" style={{ marginTop: "-400px", color: "white" }}>
                     <br />
                     <p>Name of Broadcast</p>
-                    <input></input>
+                    <input value={title} onChange={(e) => setTitle(e.target.value)}></input>
                     <br />
                     <p>Description of Broadcast</p>
-                    <input ></input>
+                    <input value={desc} onChange={(e) => setDesc(e.target.value)}></input>
                     <br />
                     <button onClick={() => createBroadcast()}>Submit</button>
                 </div>
