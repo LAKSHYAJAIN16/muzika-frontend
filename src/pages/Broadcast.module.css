@@ -1,0 +1,68 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  font-size: 3em;
+}
+
+.subHeading {
+  font-size: 1.2em;
+  margin-top: -10px;
+}
+
+.startButton {
+  width: 100px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.startButton:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.startButton:focus {
+  outline: none;
+}
+
+.waitForAccept {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+  text-align: center;
+}

@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Create from "./pages/Create";
 import Video from "./pages/Video";
 import Profile from "./pages/Profile";
+import Broadcast from "./pages/Broadcast";
 
 import { AuthProvider } from "./contexts/Auth";
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/auth/post/provider" element={<ProviderPostAuth />} />
             <Route path="/videos/specific" element={<Video />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/broadcast" element={<Broadcast />} />
           </Routes>
         </Router>
       </div>
