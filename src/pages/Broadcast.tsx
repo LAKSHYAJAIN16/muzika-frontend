@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
@@ -19,24 +19,98 @@ export default function Broadcast() {
                 window.location.replace("/broadcast?intent=browsing");
             }
 
+            //Set States
             setIntent(temp_intent);
             setRetrievedIntent(true);
+
+            //Set Title
+            document.title = "Broadcast on Muzika";
         }
     }, [])
 
     //Permission Prompt Component
-    const PermissionPrompt: FC = () => {
+    interface PermissionProps {
+        askedCallback: Function
+    }
+    const PermissionPrompt: FC<PermissionProps> = (props) => {
         useEffect(() => {
             const req = async () => {
                 let stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-                console.log(stream);
+                props.askedCallback(stream);
             }
             req();
         }, [])
+
         return (
             <div className={styles.waitForAccept}>
                 Give Us Permission to use the Webcam and Microphone
             </div>
+        )
+    }
+
+    //Video Preview Component
+    interface VideoPreviewProps {
+        stream?: MediaStream
+    }
+    const VideoPreview: FC<VideoPreviewProps> = (props) => {
+        const videoRef = useRef<HTMLVideoElement>(null);
+
+        useEffect(() => {
+            if (props.stream && videoRef.current) {
+                videoRef.current.srcObject = props.stream;
+                videoRef.current.addEventListener("loadedmetadata", () => {
+                    videoRef.current?.play();
+                })
+            }
+        }, [])
+
+        const createBroadcast = () => {
+
+        }
+
+        return (
+            <div className="nflex">
+                <div className={styles.videoPreview}>
+                    <video
+                        ref={videoRef}
+                        style={{ height: "100%", width: "100%" }}
+                    />
+                </div>
+                <div className="flex" style={{ marginTop: "-400px", color: "white" }}>
+                    <br />
+                    <p>Name of Broadcast</p>
+                    <input></input>
+                    <br />
+                    <p>Description of Broadcast</p>
+                    <input ></input>
+                    <br />
+                    <button onClick={() => createBroadcast()}>Submit</button>
+                </div>
+            </div>
+        )
+    }
+
+    //Main Component
+    const MainCreateComponent: FC = () => {
+        const [askedForPermission, setAskedForPermission] = useState<boolean>(false);
+        const [media, setMedia] = useState<MediaStream>();
+
+        const permissionCallback = (stream: MediaStream) => {
+            setMedia(stream);
+            setAskedForPermission(true);
+        }
+
+        return (
+            <>
+                {askedForPermission
+                    ? <>
+                        <VideoPreview stream={media} />
+                    </>
+                    : <>
+                        <PermissionPrompt askedCallback={permissionCallback} />
+                    </>
+                }
+            </>
         )
     }
 
@@ -72,7 +146,7 @@ export default function Broadcast() {
                     )}
                     {intent === "create" && (
                         <>
-                            <PermissionPrompt />
+                            <MainCreateComponent />
                         </>
                     )}
                 </>

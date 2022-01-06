@@ -66,3 +66,8 @@
   font-size: 2em;
   text-align: center;
 }
+
+.videoPreview{
+  height: 500px;
+  width: 500px; 
+}

@@ -19,3 +19,16 @@
 .poppins {
   font-family: "Poppins", sans-serif;
 }
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
