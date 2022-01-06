@@ -1,0 +1,87 @@
+.main {
+  --scale: 7vw;
+  height: calc(var(--scale) * 4.5);
+  width: calc(var(--scale) * 8);
+  background-color: black;
+  border: 1px solid black;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.views {
+  margin-top: -10px;
+  font-size: 0.9em;
+  color: rgb(172, 172, 172);
+}
+
+.likes{
+  padding-left: 10px;
+  font-size: 1.3em;
+  user-select: none;
+}
+
+.shares{
+  padding-left: 10px;
+  font-size: 1.2em;
+  user-select: none;
+}
+
+.desc{
+  margin-top: -10px;
+  padding-left: 60px;
+  font-size: 0.9em;
+}
+
+.shareIcon{
+  margin-left: 30px;
+  cursor: pointer;
+  zoom: 1.3;
+}
+
+.heartIcon {
+  cursor: pointer;
+  zoom: 1.4;
+  margin-left: 80px;
+  color: red;
+  user-select: none;
+}
+
+.hearts {
+  position: absolute;
+  margin-top: -40px;
+}
+
+.heartAnimation {
+  fill: red;
+  margin-top: 0px;
+  opacity: 0;
+  animation: heart 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+@keyframes heart {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  20%{
+    opacity: 1;
+  }
+  80% {
+    margin-top: -120vh;
+    opacity: 1;
+  }
+  100% {
+    fill: rgb(223, 0, 0);
+    margin-top: -120vh;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,26 @@
+.top {
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.profilePic {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.username {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 2.7em;
+}
+
+.joined {
+  margin-top: -10px;
+  font-size: 1em;
+}

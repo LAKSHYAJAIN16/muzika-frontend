@@ -1,0 +1,4 @@
+Cloudinary
+   cache
+        redis
+             fnAEbNHsj8AASP3vY9yy6fzDyaVft43HNYRH51dd

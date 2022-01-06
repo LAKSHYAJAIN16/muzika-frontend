@@ -1,0 +1,109 @@
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-family: "Poppins";
+}
+
+.nMain {
+    margin-top: auto;
+    margin-bottom: auto;
+    display : flex;
+    align-items : center;
+}
+
+.videoModal{
+    background-color: rgb(201, 201, 201);
+    height: 400px;
+}
+
+.videoHeader{
+    padding-left: 10px;
+    padding-top: -40px;
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.videoUploadIcon{
+    zoom: 10;
+}
+
+.videoUploadText{
+    color: black;
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.videoUpload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.videoPreview{
+    position: absolute;
+    aspect-ratio: 16/9;
+    width: 400px;
+    height: 300px;
+    margin-left: 360px;
+}
+
+.pagination{
+    position: absolute;
+    margin-top: -320px;
+}
+
+.titleInput{
+    margin-left: 10px;
+    height: 40px;
+    width: 320px;
+    font-size: 0.8em;
+}
+
+.descInput{
+    margin-left: 10px;
+    resize: none;
+    height: 150px;
+    width: 320px;
+}
+
+.buttonWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otherOptionWrapper{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: black;
+}
+
+.finalTitle{
+    margin-left: 10px;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+
+.finalAuthor{
+    text-align: center;
+    font-size: 1em;
+    margin-top: -10px;
+    color: black;
+}
+
+.finalDesc{
+    margin-left: 10px;
+    color: black;
+    width: 300px;
+}

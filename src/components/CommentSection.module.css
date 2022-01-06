@@ -1,0 +1,158 @@
+.commentHeaders {
+  display: flex;
+  align-items: center;
+}
+
+.sortBy {
+  margin-top: -15px;
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sortIcon {
+  margin-right: 10px;
+  zoom: 1.2;
+  cursor: pointer;
+}
+
+.sortDropdown {
+  background-color: transparent !important;
+  border: none;
+}
+
+.sortDropdown:focus {
+  font-weight: 500 !important;
+}
+
+.sortOption {
+  color: rgb(255, 255, 255) !important;
+}
+
+.commentInput {
+  display: flex;
+  align-items: center;
+}
+
+.currentUserProfilePic {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.commentInputField {
+  margin-top: -10px;
+  width: 700px;
+  margin-left: 20px;
+  background-color: transparent;
+  background-image: linear-gradient(gray, gray);
+  background-size: 10% 3px;
+  background-repeat: no-repeat;
+  background-position: center 110%;
+  border: none;
+  outline: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.commentInputField:focus {
+  background-image: linear-gradient(white, white);
+  background-size: 100% 3px;
+}
+
+.buttons {
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.cancelButton {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 0.8em;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.submitButton {
+  margin-left: 10px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 0.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  backface-visibility: hidden;
+  border: 0.3rem solid transparent;
+  border-radius: 1rem;
+  border-color: transparent;
+  background-color: #25aae1;
+  color: rgb(255, 255, 255);
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.submitButton:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.commentBodyWrapper {
+  margin-top: -10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentUserName {
+  margin-left: 10px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.commentTimeAgo {
+  margin-left: 10px;
+  font-size: 0.7em;
+  color: gray;
+}
+
+.commentBody {
+  position: relative;
+  margin-top: -12px;
+  margin-left: 10px;
+}
+
+.commentOptions {
+  margin-left: 680px;
+  margin-top: -40px;
+  z-index: 10 !important;
+  pointer-events: auto;
+}
+
+.commentOptionIcon {
+  zoom: 0.8;
+  cursor: pointer;
+}
+
+.optionDropdown::after{
+  display: none !important;
+}
+
+.editInputField{
+  margin-left: 0px !important;
+  margin-top: 30px !important;
+}
+
+.editButtons{
+  margin-top: -4px !important;
+  margin-left: 550px;
+}

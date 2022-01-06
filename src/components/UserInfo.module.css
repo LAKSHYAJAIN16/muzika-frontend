@@ -1,0 +1,144 @@
+.main {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.usernameAFans {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.userProfilePic {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.username {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.fans {
+  margin-top: -15px;
+  font-weight: 400;
+  font-size: 0.8em;
+  color: rgb(172, 172, 172);
+}
+
+.followButtonNormal {
+  width: 100px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-left: 60%;
+}
+
+.followButtonNormal:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.followButtonNormal:focus {
+  outline: none;
+}
+
+.followButtonGray {
+  width: 100px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to right,
+    #394955,
+    #6a707c,
+    #97b8c4,
+    #373c42
+  );
+  box-shadow: 0 4px 15px 0 rgba(60, 64, 70, 0.75);
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-left: 60%;
+}
+
+.followButtonGray:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.followButtonGray:focus {
+  outline: none;
+}
+
+.followButtonDisabled {
+  width: 100px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.589);
+  opacity: 0.7;
+  cursor: not-allowed;
+  margin: 20px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-left: 60%;
+}
+
+.followButtonDisabled:hover {
+  cursor: not-allowed;
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.followButtonDisabled:focus {
+  cursor: not-allowed;
+  outline: none;
+}

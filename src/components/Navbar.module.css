@@ -1,0 +1,99 @@
+.main {
+  display: flex;
+  z-index: 10;
+  background-color: black;
+  align-items: center;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  margin-top: 1px;
+}
+
+.logoWrapper {
+  overflow-x: hidden;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  zoom: 0.8;
+  cursor: pointer;
+}
+
+.logo {
+  overflow-x: hidden;
+  height: 50px;
+  width: 50px;
+}
+
+.logoName {
+  overflow-x: hidden;
+  margin-left: 3px;
+  margin-top: 20px;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.searchWrapper {
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  padding-left: 10px;
+  width: 70vw;
+  height: 30px;
+  border-radius: 25px;
+  background-color: rgb(49, 49, 49);
+}
+
+.searchIcon {
+  overflow-x: hidden;
+  zoom: 0.7;
+  cursor: pointer;
+}
+
+.searchInput {
+  overflow-x: hidden;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  width: 70vw;
+  color: white;
+  font-size: 0.8em;
+}
+
+.optionsWrapper {
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option {
+  overflow-x: hidden;
+  margin-top: 13px;
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 0.9em;
+  transition: all 0.5s ease;
+}
+
+.option:hover {
+  color: rgb(194, 255, 255);
+}
+
+.userWrapper{
+  width: 100px;
+  overflow-x: hidden;
+  margin-left: 30px;
+}
+
+.profilePic{
+  overflow-x: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-left: 30px;
+  cursor: pointer;
+}

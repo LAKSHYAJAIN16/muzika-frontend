@@ -1,0 +1,159 @@
+/* Main Page Styles */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 0px;
+  color: white;
+}
+
+.spinner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.welcome {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-family: "Poppins", sans-serif;
+  animation-name: welcomeIN;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-duration: 1.5s;
+}
+
+.subWelcome {
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  animation-name: welcomeIN;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-duration: 1s;
+}
+
+.question {
+  margin-left: -1000vw;
+  opacity: 0;
+  font-size: 4em;
+  animation-name: questionIN;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-duration: 3.5s;
+  animation-delay: 1s;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  opacity: 0;
+  cursor:auto;
+  pointer-events: none;
+  width: 18rem;
+  height: 22rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 100px;
+  animation: cardIN 1s 2.5s ease forwards;
+  border: 3px solid black;
+}
+
+.card:hover {
+  border: 3px solid goldenrod;
+}
+
+.uid {
+  font-size: 0.5em;
+  margin-left: -88%;
+  margin-top: 20px;
+}
+
+/* Fans Post-Auth */
+.fQuestion {
+  margin-top: 10px;
+  overflow: hidden;
+  font-size: 3em;
+  font-family: "Poppins", sans-serif;
+  animation: fQuestionIN 1s ease forwards;
+}
+
+.fDesc {
+  margin-top: -10px;
+  font-size: 0.8em;
+}
+
+.artists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: artistsIN 1s 1s ease forwards;
+}
+
+.buttonWrapper{
+  flex-direction: row;
+  opacity: 0;
+  animation: artistsIN 1s 2s ease forwards;
+}
+
+/* Animations */
+@keyframes welcomeIN {
+  0% {
+    margin-left: -100vw;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes questionIN {
+  0% {
+    margin-left: -100vw;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes cardIN {
+  0% {
+    opacity: 0;
+    cursor:auto;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+  }
+}
+
+@keyframes fQuestionIN {
+  0% {
+    margin-top: -100px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+@keyframes artistsIN {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
