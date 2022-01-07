@@ -2,6 +2,9 @@ import { FC, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
+import UserSchema from "../scripts/database/models/User-Schema";
+import { BroadcastPayload } from "../scripts/server/Broadcast";
+import createBroadcast from "../scripts/server/createBroadcast";
 import styles from './Broadcast.module.css';
 
 export default function Broadcast() {
@@ -56,6 +59,7 @@ export default function Broadcast() {
         const videoRef = useRef<HTMLVideoElement>(null);
         const [title, setTitle] = useState<string>("");
         const [desc, setDesc] = useState<string>("");
+        const [user, setUser] = useState<UserSchema>();
 
         useEffect(() => {
             if (props.stream && videoRef.current) {
@@ -64,10 +68,29 @@ export default function Broadcast() {
                     videoRef.current?.play();
                 })
             }
+
+            //Get User
+            const actualData: string = localStorage.getItem("cached_user") || "";
+            const data: any = JSON.parse(actualData);
+            const user: UserSchema = data.data;
+            setUser(user);
         }, [])
 
-        const createBroadcast = () => {
-            console.log({title, desc});
+        const broadcast = async () => {
+            //Create Payload
+            const payload: BroadcastPayload = {
+                username: user?.name || "",
+                profilePic: user?.photo || "",
+                title: title,
+                desc: desc
+            }
+
+            //Send Request
+            const res = await createBroadcast(payload);
+            console.log(res);
+
+            //Redirect
+            window.location.replace("/broadcaster?id=" + res.data.data.serverID);
         }
 
         return (
@@ -86,7 +109,7 @@ export default function Broadcast() {
                     <p>Description of Broadcast</p>
                     <input value={desc} onChange={(e) => setDesc(e.target.value)}></input>
                     <br />
-                    <button onClick={() => createBroadcast()}>Submit</button>
+                    <button onClick={() => broadcast()}>Submit</button>
                 </div>
             </div>
         )

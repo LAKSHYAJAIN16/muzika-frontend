@@ -1,5 +1,6 @@
 interface Config{
-    backend:string;
+    backend:string,
+    server:string
 }
 
 export default Config;
