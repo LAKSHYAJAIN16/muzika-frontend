@@ -38,7 +38,7 @@ export default function Navbar() {
             <img
                 src={profilePic}
                 className={styles.profilePic}
-            />
+            ></img>
         </div>
     )
 }
