@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Broadcast from "./pages/Broadcast";
 import Broadcaster from "./server/Broadcaster";
 import Viewer from "./server/Viewer";
+import CreateCompetiton from "./pages/CreateCompetiton";
 
 import { AuthProvider } from "./contexts/Auth";
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/broadcast" element={<Broadcast />} />
             <Route path="/broadcaster" element={<Broadcaster />} />
             <Route path="/viewer" element={<Viewer />} />
+            <Route path="/create-competiton" element={<CreateCompetiton />} />
           </Routes>
         </Router>
       </div>
